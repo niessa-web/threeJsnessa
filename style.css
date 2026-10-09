@@ -9,7 +9,6 @@ body {
 
 canvas { display: block; }
 
-/* ---------- Loading ---------- */
 #loader {
   position: fixed; inset: 0; z-index: 100;
   background: radial-gradient(circle at 50% 40%, #1b2140, #0b0e1a);
@@ -28,7 +27,6 @@ canvas { display: block; }
 @keyframes spin { to { transform: rotate(360deg); } }
 #loader-text { color: #9fb4ff; letter-spacing: 1px; }
 
-/* ---------- HUD ---------- */
 .hud { position: fixed; z-index: 10; }
 
 .hud.top {
@@ -47,7 +45,6 @@ canvas { display: block; }
   backdrop-filter: blur(8px);
 }
 
-/* ---------- Panel ---------- */
 .panel {
   top: 50%; right: 20px; transform: translateY(-50%);
   width: 220px;

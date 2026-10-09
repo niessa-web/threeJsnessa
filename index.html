@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Little Man Studio — Three.js</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Loading screen -->
+  <div id="loader">
+    <div class="loader-box">
+      <div class="spinner"></div>
+      <p id="loader-text">Memuat Little_Man.glb ...</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="hud top">
+    <h1>🎮 Little Man <span>Studio</span></h1>
+    <p>Penugasan Three.js — Model: <b>Little_Man.glb</b></p>
+  </header>
+
+  <!-- Control panel -->
+  <aside class="hud panel">
+    <h2>Kontrol</h2>
+    <button id="btn-rotate" class="active">🔄 Auto-Rotate</button>
+    <button id="btn-wireframe">🕸️ Wireframe</button>
+    <button id="btn-night">🌙 Mode Malam</button>
+    <button id="btn-party">🎉 Party Lights</button>
+    <button id="btn-screenshot">📸 Screenshot</button>
+
+    <label>Warna Lampu
+      <input type="color" id="light-color" value="#00e5ff" />
+    </label>
+    <label>Skala Model
+      <input type="range" id="scale" min="0.5" max="2.5" step="0.05" value="1" />
+    </label>
+    <label>Kecepatan Animasi
+      <input type="range" id="speed" min="0" max="3" step="0.1" value="1" />
+    </label>
+  </aside>
+
+  <footer class="hud bottom">
+    <span>Seret untuk memutar · Scroll untuk zoom · Klik kanan untuk geser</span>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
